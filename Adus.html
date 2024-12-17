@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Users</title>
+        <link rel="stylesheet" href="user.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-primary sticky-lg-top">
+            <div class="container-fluid">
+                <p id="logo">LOGO</p>  
+                <button class="navbar-toggler"type="button"data-bs-toggle="offcanvas"data-bs-target="#offcanvasNavbar"aria-controls="offcanvasNavbar">
+                 <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"tabindex="-1"id="offcanvasNavbar"aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Profile</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Name</p>
+                        <p>Email</p>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin.html">Dashboard</a>
+                            </li>    
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">User<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">Settings</a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="container mt-5">
+            <section id="users" class="mb-5">
+                <h2>Users</h2>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#add-user-modal">Add User</button>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-modal">Edit</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete-user-modal">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>jane.smith@example.com</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-modal">Edit</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete-user-modal">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Alice Johnson</td>
+                            <td>alice.j@example.com</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-modal">Edit</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete-user-modal">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Bob Brown</td>
+                            <td>bob.brown@example.com</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-modal">Edit</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete-user-modal">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Charlie White</td>
+                            <td>charlie.w@example.com</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-modal">Edit</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete-user-modal">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <div class="modal fade" id="add-user-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="add-user-modal-label">Add User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-user-form">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="text" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="text" class="form-control" id="password" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add User</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="edit-user-modal" tabindex="-1" role="dialog" aria-labelledby="edit-user-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="edit-user-modal-label">Edit User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-user-form">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="text" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="text" class="form-control" id="password" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="modal fade" id="delete-user-modal" tabindex="-1" role="dialog" aria-labelledby="delete-user-modal-label" aria-hidden="true">
+            <div class=" modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="delete-user-modal-label">Delete User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this user?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-danger" >Delete</button></div>
+                 
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

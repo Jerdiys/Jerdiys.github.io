@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body class="bg-primary-subtle" >
+    <div class="login-container bg-light" style="width: 400px;">
+        <h2 class="text-center">Login</h2>
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="form-group ">
+                <label for="username">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required maxlength="6">
+            </div>
+            <center><button type="submit" class="btn btn-primary btn-block butt" id="button" onclick="login(event)">Login</button></center>
+        </form>
+    </div>s
+    
+    <script>
+        function login(event) {
+            event.preventDefault();
+            let name = document.getElementById("email").value.trim();
+            let pswd = document.getElementById("password").value.trim();
+
+            const correctUname = 'edidiongjohnson9@gmail.com';
+            const correctPassword = '419520';
+            const rightUname = 'seanjed82@gmail.com';
+            const rightPassword = '123456';
+
+            if (name == correctUname && pswd == correctPassword )  {
+               
+                window.location.href = "admin.html";
+            } 
+            else if(name ==rightUname && pswd == rightPassword) {
+                window.location.href = "user.html";
+            }
+            else {
+                alert('Incorrect email or password. Please check and try again.');
+            }
+        }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+</html>

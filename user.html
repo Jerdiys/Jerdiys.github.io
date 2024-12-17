@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Users</title>
+        <link rel="stylesheet" href="user.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            .veiw{
+                padding: 20px;
+            }
+            
+        </style>
+
+    </head>
+    <body  >
+        <nav class="navbar navbar-light bg-primary sticky-lg-top">
+            <div class="container-fluid">
+                <p id="logo">LOGO</p>  
+                <button class="navbar-toggler"type="button"data-bs-toggle="offcanvas"data-bs-target="#offcanvasNavbar"aria-controls="offcanvasNavbar">
+                 <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"tabindex="-1"id="offcanvasNavbar"aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Profile</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Name</p>
+                        <p>Email</p>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#change-password-modal" data-bs-toggle="modal">Change Password</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <section id="dashboard" class="mb-5 edy">
+                <h2 class="text-center">Dashboard</h2>
+                <div class="text-center">
+                    <p>Status</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-header">Successful</div>
+                                <div class="card-body">
+                                    <h3 class="card-title " id="successful">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-white bg-warning mb-3">
+                                <div class="card-header">Pending</div>
+                                <div class="card-body">
+                                    <h3 class="card-title" id="pending">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-white bg-danger mb-3">
+                                <div class="card-header">Failed</div>
+                                <div class="card-body">
+                                    <h3 class="card-title" id="failed">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        
+        <div class="veiw">
+            <div  id="upload" class="card shadow-sm p-4 up ">
+                <h4 class="mb-3">Upload File</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="fileUpload" class="form-label">Select a CSV or Excel file</label>
+                        <input type="file" class="form-control" id="fileUpload" accept=".csv, .xlsx">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="veiw">
+            <div class="mt-5 rct up" >
+                <h4>Recent Uploads</h4>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>File Name</th>
+                            <th>Upload Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>debtors_list.csv</td>
+                            <td>2024-12-09</td>
+                            <td>Processed</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>clients_data.xlsx</td>
+                            <td>2024-12-08</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="change-password-modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="change-password-modal">Change password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="change-password-form">
+                            <div class="form-group">
+                                <label >Current Password:</label>
+                                <input type="text" class="form-control" id="0pswd" name="opswd">
+                            </div>
+                            <div class="form-group">
+                                <label >New Password:</label>
+                                <input type="text" class="form-control" id="npswd" name="npswd">
+                            </div>
+                            <div class="form-group">
+                                <label >Confirm Password:</label>
+                                <input type="text" class="form-control" id="cpswd" name="cpswd">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <script src="js/bootstrap.js"></script>
+
+    </body>
+</html>
