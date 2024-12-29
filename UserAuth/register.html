@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
-    <a href="../index.html"><img src="../images/sureveyLogo.png" alt="Logo" height="50px" style="margin: 20px 0px 0px 20px;"></a>
+    <a href="../index.html"><img src="../images/sureveyLogo.png" alt="Logo" height="50px" style="margin: 20px 0px 30px 20px;"></a>
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
         <form method="" class="card crd" action="">
             <h4 class="card-header mb-4 text-center d-flex justify-content-center align-items-center">REGISTER</h4>
@@ -37,8 +37,7 @@
                 <input class="form-control inp mb-4" type="password" name="psw2" placeholder="Confirm Password" required>
                 <input class="form-control inp mb-4" type="text" name="referal" placeholder="Referal Code" required>
             </div>
-            <center><button id="butt" class="btn btn-outline-warning w-50 mb-4">Register
-            </button></center>
+            <center><button  id="butt" class="btn btn-outline-warning w-50 mb-4" onclick="success(event)">Register</button></center>
             <div class="card-footer" style="height: 50px;">
                 <p class="text-center">Already have an account? <a href="login.html" style="text-decoration: none;">Sign In</a></p>
             </div>
@@ -46,5 +45,11 @@
         
     </div>
     <script src="../js/bootstrap.js"></script>
+    <script>
+        function success(event) {
+            event.preventDefault();
+            window.location.href = "success.html";
+        }
+    </script>
 </body>
 </html>
