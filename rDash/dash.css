@@ -90,6 +90,7 @@ body {
 
     .bottom-nav {
         display: flex;
+        z-index: 100;
     }
 
     .bar{
@@ -103,6 +104,8 @@ body {
     .content{
         margin-left: 0px;
         height: 93.7vh;
+        padding-bottom: 300px;
+        z-index: 70;
     }
     .earn{
         flex-direction: column;
