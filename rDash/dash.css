@@ -35,13 +35,6 @@ body {
     align-items: center;
     justify-content: right;
 }
-.bar h4{
-    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-size: x-large;
-    font-weight: 700;
-    color: purple;
-
-}
 
 .bott{
     position: absolute;
@@ -79,10 +72,6 @@ body {
     text-align: center;
 }
 
-.bottom-nav a:hover {
-    color: #adb5bd;
-}
-
 @media (max-width: 768px) {
     .sidebar {
         display: none;
@@ -104,7 +93,7 @@ body {
     .content{
         margin-left: 0px;
         height: 93.7vh;
-        padding-bottom: 800px;
+        padding-bottom: 600px;
         z-index: 70;
     }
     .earn{

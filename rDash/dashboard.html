@@ -40,6 +40,7 @@
 
             <h1 style="font-weight: 600; margin: 10px 10px 40px 10px ;">Dashboard</h1>
             <h4 style="margin: 10px 10px 10px 10px ;">Hello, user</h4>
+
             <div class="d-flex align-items-center justify-content-center earn">
                 <div class="shadow card m-3 bg-success e">
                     <h5 class="card-header text-dark">Total Earned:</h5>
@@ -64,14 +65,33 @@
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
+                <div class="modal-content bg-success-subtle">
+                    <div class="modal-header bg-success text-white">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Profile</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    ...
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="../images/profile.png" alt="Profile pic" height="60px">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                            <h5>Username</h5>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h6 class="bg-warning p-2 rounded-1 text-success"><i class="fa-solid fa-check-circle"></i>  Verified</h6>
+                        </div>
+                        
+                        <hr>
+                        <h6><b>Email:</b>  xxx@xxx.com</h6>
+                        <h6><b>Phone Number:</b>  1234567890</h6>
+                        <h6><b>Referer:</b>    Bamidele</h6>
+                        <br>
+                        <p><b>Referal Code</b></p>
+                        <p style="font-style: italic; margin-top: -15px;">xxxxxx</p>
+                        
+                        
                     </div>
+                    <hr class="mb-auto">
                     <div class="modal-footer d-flex align-items-center justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <a class="btn btn-danger text-light" href="../index.html">
