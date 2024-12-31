@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Referals</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
@@ -11,18 +11,11 @@
     </head>
 
     <style>
-        .e {
-            width: 50vw;
-        }
+        
 
         @media (max-width: 768px) {
-            .earn{
-                flex-direction: column;
-            }
-            .e{
-                width: 80vw;
-            }
         }
+
     </style>
 
 
@@ -30,13 +23,13 @@
 
         <div class="sidebar bg-dark">
             <img src="../images/sureveyLogo.png" alt="logo" height="40px" style="margin-bottom: 40px; margin-top: 10px;">
-            <a class="btn bg-warning-subtle text-dark" href="dashboard.html">
+            <a class="btn btn-dark" href="dashboard.html">
                 <i class="fa-solid fa-layer-group" style="margin-right: 10px;"></i>Dashboard
             </a>
             <a class="btn btn-dark" href="tasks.html">
                 <i class="fa-solid fa-list-check" style="margin-right: 10px;"></i>Tasks
             </a>
-            <a class="btn btn-dark" href="referals.html">
+            <a class="btn bg-warning-subtle text-dark" href="referals.html">
                 <i class="fa-solid fa-users-gear" style="margin-right: 10px;"></i>Referals
             </a>
             <a class="btn btn-dark" href="withdrawal.html">
@@ -54,34 +47,53 @@
                 <a href="" title="profile" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../images/profile.png" alt="Profile" height="44px"></a>
             </div>
 
-            <h1 style="font-weight: 600; margin: 10px 10px 40px 10px ;">Dashboard</h1>
-            <h4 style="margin: 10px 10px 10px 10px ;">Hello, user</h4>
+            <h1 style="font-weight: 600; margin: 10px 10px 40px 10px ;">Referals</h1>
 
-            <div class="d-flex align-items-center justify-content-center earn">
-                <div class="shadow card m-3 bg-success e">
-                    <h5 class="card-header text-dark">Total Earned:</h5>
-                    <div class="card-body bg-success-subtle text-center">
-                        <h6 style="font-size: x-large;">&#8358;0</h6>
-                    </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-auto text-light">Earnings acquired from completing tasks.</p>
-                    </div>
-                </div>
-                <div class="shadow card m-3 bg-warning e">
-                    <h5 class="card-header text-dark">Referal Earnings:</h5>
-                    <div class="card-body bg-warning-subtle text-center">
-                        <h6 style="font-size: x-large;">&#8358;0</h6>
-                    </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-auto text-light">Earnings acquired from referal bonuses.</p>
-                    </div>
-                </div>
+            <div class="m-3">
+                <p class="text-info-emphasis" style="text-align: justify;">
+                    Each referal awards you a bonus of &#8358;200.00, increasing your chance of reaching the withdrawl limit early.
+                    You can find you referal code below;
+                </p>
+                <h5 class="mb-4 text-info">Referal Code:   xxxxxx</h5>
             </div>
 
-            <div class="d-flex align-items-center justify-content-center">
-                <img src="../images/dashImg.jpg" alt="surepic" height="360px">                
+            <div class="m-3">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Jane Doe</td>
+                          <td>xxxxxxx</td>
+                          <td>yyy@yyy.com</td>
+                          <td><span class="badge bg-warning">Unverified</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jeff Hardy</td>
+                          <td>xxxxxxx</td>
+                          <td>yyy@yyy.com</td>
+                          <td><span class="badge bg-warning">Unverified</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Ogbanje Kenife</td>
+                          <td>xxxxxxx</td>
+                          <td>yyy@yyy.com</td>
+                          <td><span class="badge bg-success">Verified</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
+            
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,7 +137,7 @@
         </div>
 
         <div class="bottom-nav bg-dark">
-            <a class="btn bg-warning-subtle text-dark" href="dashboard.html">
+            <a class="btn btn-dark" href="dashboard.html">
                 <div>
                     <i class="fa-solid fa-layer-group"></i>            
                     <p class="plink">Dashboard</p>
@@ -138,7 +150,7 @@
                     <p class="plink">Tasks</p>
                 </div>
             </a>
-            <a class="btn btn-dark" href="referals.html">
+            <a class="btn bg-warning-subtle text-dark" href="referals.html">
                 <div>
                     <i class="fa-solid fa-users-gear"></i>
                     <p class="plink">Referals</p>

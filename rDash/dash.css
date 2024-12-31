@@ -61,9 +61,6 @@ body {
     padding: 10px 0;
 }
 
-.e{
-    width: 50vw;
-}
 
 .bottom-nav a {
     color: white;
@@ -93,13 +90,8 @@ body {
     .content{
         margin-left: 0px;
         height: 93.7vh;
-        padding-bottom: 600px;
+        padding-bottom: 1100px;
         z-index: 70;
     }
-    .earn{
-        flex-direction: column;
-    }
-    .e{
-        width: 80vw;
-    }
+    
 }

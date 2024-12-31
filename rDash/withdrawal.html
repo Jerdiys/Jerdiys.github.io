@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Withdrawal</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
@@ -11,18 +11,21 @@
     </head>
 
     <style>
-        .e {
-            width: 50vw;
+        .frm{
+            padding: 9px;
         }
 
         @media (max-width: 768px) {
-            .earn{
-                flex-direction: column;
+            .for{
+                flex-wrap: wrap;
             }
-            .e{
-                width: 80vw;
+
+            .subm{
+                margin: 10px auto;
+                align-self: center;
             }
         }
+
     </style>
 
 
@@ -30,7 +33,7 @@
 
         <div class="sidebar bg-dark">
             <img src="../images/sureveyLogo.png" alt="logo" height="40px" style="margin-bottom: 40px; margin-top: 10px;">
-            <a class="btn bg-warning-subtle text-dark" href="dashboard.html">
+            <a class="btn btn-dark" href="dashboard.html">
                 <i class="fa-solid fa-layer-group" style="margin-right: 10px;"></i>Dashboard
             </a>
             <a class="btn btn-dark" href="tasks.html">
@@ -39,7 +42,7 @@
             <a class="btn btn-dark" href="referals.html">
                 <i class="fa-solid fa-users-gear" style="margin-right: 10px;"></i>Referals
             </a>
-            <a class="btn btn-dark" href="withdrawal.html">
+            <a class="btn bg-warning-subtle text-dark" href="withdrawal.html">
                 <i class="fa-solid fa-money-bill-transfer" style="margin-right: 10px;"></i>Withdrawal
             </a>
 
@@ -54,34 +57,88 @@
                 <a href="" title="profile" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../images/profile.png" alt="Profile" height="44px"></a>
             </div>
 
-            <h1 style="font-weight: 600; margin: 10px 10px 40px 10px ;">Dashboard</h1>
-            <h4 style="margin: 10px 10px 10px 10px ;">Hello, user</h4>
+            <h1 style="font-weight: 600; margin: 10px 10px 40px 10px ;">Withdrawal</h1>
 
-            <div class="d-flex align-items-center justify-content-center earn">
-                <div class="shadow card m-3 bg-success e">
-                    <h5 class="card-header text-dark">Total Earned:</h5>
-                    <div class="card-body bg-success-subtle text-center">
-                        <h6 style="font-size: x-large;">&#8358;0</h6>
-                    </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-auto text-light">Earnings acquired from completing tasks.</p>
-                    </div>
-                </div>
-                <div class="shadow card m-3 bg-warning e">
-                    <h5 class="card-header text-dark">Referal Earnings:</h5>
-                    <div class="card-body bg-warning-subtle text-center">
-                        <h6 style="font-size: x-large;">&#8358;0</h6>
-                    </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-auto text-light">Earnings acquired from referal bonuses.</p>
-                    </div>
-                </div>
+            <div class="m-3">
+                <p class="text-info-emphasis" style="text-align: justify;">
+                    The minimum amount required for any withdrawal is &#8358;8000.00. Any application involving a lesser amount will not be considered.
+                    Application for withdrawal can be done at anytime, but payments will be made only on the weekends. <br><br>
+                    <b>Please note that the payment will be made to the bank account provided by you. The Account name should tally with the name on the account provided.
+                    Any discrepancy in the account name will lead to the withdrawal being rejected.</b> <br>
+                </p>
             </div>
 
-            <div class="d-flex align-items-center justify-content-center">
-                <img src="../images/dashImg.jpg" alt="surepic" height="360px">                
+            <div class="frm m-3">
+                <form class="d-flex align-items-center justify-content-between for" action="">
+                    <input class="form-control bg-warning-subtle m-2" type="text" name="bank_name" placeholder="Bank Name">
+                    <input class="form-control bg-warning-subtle m-2" type="text" name="acct_name" placeholder="Account Name">
+                    <input class="form-control bg-warning-subtle m-2" type="number" name="acct_no" placeholder="Account Number">
+                    <input class="form-control bg-warning-subtle m-2" type="number" name="amount" placeholder="Amount">
+                    <button class="btn btn-dark subm" type="submit">Submit</button>
+                </form>
             </div>
 
+            <div class="m-3 table-responsive">
+                <table class="table table-sm table-striped table-hover table-bordered table align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Bank Name</th>
+                            <th scope="col">Account Name</th>
+                            <th scope="col">Account Number</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>UBA</td>
+                          <td>Jane Doe</td>
+                          <td>xxxxxxxxxx</td>
+                          <td>10000</td>
+                          <td><span class="badge bg-warning">pending</span></td>
+                          <td>
+                            <form action="">
+                                <input class="btn btn-danger btn-sm" type="button" value="Cancel">
+                              </form>
+                          </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>First Bank</td>
+                            <td>Taiwo Akinola</td>
+                            <td>xxxxxxxxxx</td>
+                            <td>20000</td>
+                            <td><span class="badge bg-warning">pending</span></td>
+                            <td>
+                                <form action="">
+                                    <input class="btn btn-danger btn-sm" type="button" value="Cancel">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Acccess Bank</td>
+                            <td>Nakupenda Ifeoma</td>
+                            <td>xxxxxxxxxx</td>
+                            <td>8000</td>
+                            <td><span class="badge bg-success">paid</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Acccess Bank</td>
+                            <td>Nakupenda Ifeoma</td>
+                            <td>xxxxxxxxxx</td>
+                            <td>8000</td>
+                            <td><span class="badge bg-success">paid</span></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,7 +182,7 @@
         </div>
 
         <div class="bottom-nav bg-dark">
-            <a class="btn bg-warning-subtle text-dark" href="dashboard.html">
+            <a class="btn btn-dark" href="dashboard.html">
                 <div>
                     <i class="fa-solid fa-layer-group"></i>            
                     <p class="plink">Dashboard</p>
@@ -144,7 +201,7 @@
                     <p class="plink">Referals</p>
                 </div>
             </a>
-            <a class="btn btn-dark" href="withdrawal.html">
+            <a class="btn bg-warning-subtle text-dark" href="withdrawal.html">
                 <div>
                     <i class="fa-solid fa-money-bill-transfer"></i>
                     <p class="plink">Withdrawal</p>
